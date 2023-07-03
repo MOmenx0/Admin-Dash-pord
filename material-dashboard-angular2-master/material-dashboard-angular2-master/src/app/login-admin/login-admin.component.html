@@ -1,0 +1,21 @@
+<div id="login-page">
+  <div class="login">
+    <h2 class="login-title">Login</h2>
+    <p class="notice">Please login to access the system</p>
+    <form class="form-login" (ngSubmit)="onSubmit()">
+      <label for="email">E-mail</label>
+      <div class="input-email">
+        <input type="email" name="email" placeholder=" Enter your e-mail" required [(ngModel)]="newLogin.email">
+      </div>
+      <label for="password">Password</label>
+      <div class="input-password">
+        <input type="password" name="password" placeholder=" Enter your password" required [(ngModel)]="newLogin.password">
+      </div>
+      <button type="submit"><i class="fas fa-door-open"></i> Sign in</button>
+    </form>
+    <div *ngIf="message" class="mt-3 alert alert-danger">{{ message }}</div>
+  </div>
+  <div class="background">
+    <h1>Rent mate Admin</h1>
+  </div>
+</div>
